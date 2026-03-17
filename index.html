@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>RoboCalc — School Robotics Lab Calculator</title>
+  <meta name="description" content="Calculate component quantities and total cost for setting up a school robotics lab." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header id="app-header">
+    <div class="header-inner">
+      <span class="logo-icon">🤖</span>
+      <h1>RoboCalc</h1>
+    </div>
+    <p class="tagline">School Robotics Lab Component Calculator</p>
+  </header>
+
+  <!-- ===== PROGRESS BAR ===== -->
+  <div id="progress-bar">
+    <div class="step-dots">
+      <span class="dot active" data-step="1">1</span>
+      <span class="bar"><span class="bar-fill" id="bar1"></span></span>
+      <span class="dot" data-step="2">2</span>
+      <span class="bar"><span class="bar-fill" id="bar2"></span></span>
+      <span class="dot" data-step="3">3</span>
+      <span class="bar"><span class="bar-fill" id="bar3"></span></span>
+      <span class="dot" data-step="4">4</span>
+    </div>
+    <div class="step-labels">
+      <span>Product</span>
+      <span>Config</span>
+      <span>Students</span>
+      <span>Results</span>
+    </div>
+  </div>
+
+  <!-- ===== WIZARD CONTAINER ===== -->
+  <main id="wizard">
+
+    <!-- STEP 1 — Product Selection -->
+    <section class="step active" id="step1">
+      <h2>Select a Product</h2>
+      <p class="step-desc">Choose the robotics suite to calculate components for.</p>
+      <div class="product-cards">
+        <button class="product-card" data-product="AI Robo Suite" id="card-ai">
+          <span class="card-icon">🧠</span>
+          <span class="card-title">AI Robo Suite</span>
+          <span class="card-sub">KG – Grade 10 · Arduino, Sensors & AI</span>
+        </button>
+        <button class="product-card" data-product="Project Suite" id="card-project">
+          <span class="card-icon">🔧</span>
+          <span class="card-title">Project Suite</span>
+          <span class="card-sub">KG – Grade 10 · DIY Projects & Circuits</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 2 — Configuration -->
+    <section class="step" id="step2">
+      <h2>Lab Configuration</h2>
+      <p class="step-desc">Set how students are organized into divisions and groups.</p>
+      <div class="form-grid">
+        <div class="input-group">
+          <label for="divisionStrength">Division Strength</label>
+          <p class="input-hint">Max students per division</p>
+          <input type="number" id="divisionStrength" min="1" placeholder="e.g. 30" />
+        </div>
+        <div class="input-group">
+          <label for="groupSize">Group Size</label>
+          <p class="input-hint">Students per lab group</p>
+          <input type="number" id="groupSize" min="1" placeholder="e.g. 5" />
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="btn-back-2">← Back</button>
+        <button class="btn btn-primary" id="btn-next-2">Next →</button>
+      </div>
+    </section>
+
+    <!-- STEP 3 — Student Numbers -->
+    <section class="step" id="step3">
+      <h2>Students per Grade</h2>
+      <p class="step-desc">Enter total students for each grade. Leave 0 to skip a grade.</p>
+      <div id="grade-inputs" class="grade-inputs"></div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="btn-back-3">← Back</button>
+        <button class="btn btn-primary" id="btn-calc">Calculate →</button>
+      </div>
+    </section>
+
+    <!-- STEP 4 — Results -->
+    <section class="step" id="step4">
+      <h2>Results</h2>
+      <p class="step-desc" id="results-product-name"></p>
+
+      <!-- Summary cards -->
+      <div class="summary-cards" id="summary-cards"></div>
+
+      <!-- Division table -->
+      <div class="result-section">
+        <h3>📋 Divisions per Grade</h3>
+        <div class="table-wrap">
+          <table id="division-table">
+            <thead><tr><th>Grade</th><th>Students</th><th>Divisions</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Component table -->
+      <div class="result-section" id="base-component-section">
+        <h3>🔩 Base Component Requirements</h3>
+        <p class="section-hint">Standard kits based on group size and division strength.</p>
+        <div class="table-wrap">
+          <table id="component-table">
+            <thead><tr><th>Component</th><th>Qty / Set</th><th>Total Qty</th><th>Unit Price (₹)</th><th>Total (₹)</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Additional Component table -->
+      <div class="result-section" id="additional-component-section" style="display: none;">
+        <h3>➕ Additional Component Sets</h3>
+        <p class="section-hint">Extra kits rewarded for higher student volume and divisions.</p>
+        <div class="table-wrap">
+          <table id="additional-component-table">
+            <thead><tr><th>Component</th><th>Qty / Set</th><th>Total Qty</th><th>Unit Price (₹)</th><th>Total (₹)</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Surplus Component table -->
+      <div class="result-section" id="surplus-component-section" style="display: none;">
+        <h3>💎 Surplus Budget Allocation</h3>
+        <p class="section-hint">Recommended spare components to utilize the remaining budget cap.</p>
+        <div class="table-wrap">
+          <table id="surplus-component-table">
+            <thead><tr><th>Spare Component</th><th>Qty</th><th>Unit Price (₹)</th><th>Total (₹)</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Common tools table -->
+      <div class="result-section">
+        <h3>🛠️ Common Lab Tools</h3>
+        <p class="tool-note" id="tool-note"></p>
+        <div class="table-wrap">
+          <table id="tools-table">
+            <thead><tr><th>Tool</th><th>Qty</th><th>Unit Price (₹)</th><th>Total (₹)</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Grand total -->
+      <div class="grand-total-card" id="grand-total-card">
+        <div class="gt-main">
+          <span class="gt-label">Grand Total</span>
+          <span class="gt-value" id="grand-total-value">₹0</span>
+        </div>
+        <div class="gt-budget" id="budget-cap-info">
+          <span class="budget-label">Budget Cap (₹200/student):</span>
+          <span class="budget-value" id="budget-cap-value">₹0</span>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="btn-back-4">← Start Over</button>
+        <button class="btn btn-primary" id="btn-print-inventory">📦 Print Inventory</button>
+        <button class="btn btn-primary" id="btn-print">🖨️ Print Quote</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>RoboCalc &copy; 2026</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
