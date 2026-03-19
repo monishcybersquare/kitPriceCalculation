@@ -17,9 +17,9 @@ const PRICES = {
   'Micro:bit': 2183,
   'Arduino Uno R3 and Cable': 702.10,
   'Breadboard': 71.98,
-  'Jumper Wire M2M': 70,
-  'Jumper Wire F2F': 70,
-  'Jumper Wire M2F': 70,
+  'Jumper Wire M2M': 65,
+  'Jumper Wire F2F': 58,
+  'Jumper Wire M2F': 48,
   'Led 5x5': 2.36,
   'Buzzer': 14.16,
   'Fire Sensor': 36.58,
@@ -87,9 +87,9 @@ const PRODUCTS = {
       { name: 'Micro:bit', qty: 1 },
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'Breadboard', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Led 5x5', qty: 1 },
       { name: 'Buzzer', qty: 1 },
     ],
@@ -97,9 +97,9 @@ const PRODUCTS = {
       { name: 'Micro:bit', qty: 1 },
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'Breadboard', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Led 5x5', qty: 1 },
       { name: 'Buzzer', qty: 1 },
       { name: 'Fire Sensor', qty: 1 },
@@ -107,9 +107,9 @@ const PRODUCTS = {
     'Grade 6': [
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'Breadboard', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Led 5x5', qty: 1 },
       { name: 'Buzzer', qty: 1 },
       { name: 'Ultrasonic Sensor', qty: 1 },
@@ -120,9 +120,9 @@ const PRODUCTS = {
     'Grade 7': [
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'Breadboard', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Led 5x5', qty: 1 },
       { name: 'Buzzer', qty: 1 },
       { name: 'IR Sensor', qty: 1 },
@@ -137,9 +137,9 @@ const PRODUCTS = {
     'Grade 8': [
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'Breadboard', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Led 5x5', qty: 1 },
       { name: 'Buzzer', qty: 1 },
       { name: 'Keypad 4x4', qty: 1 },
@@ -156,9 +156,9 @@ const PRODUCTS = {
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'ESP8266', qty: 2 },
       { name: 'Breadboard', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Red LED', qty: 1 },
       { name: 'Green LED', qty: 25 },
       { name: 'Buzzer', qty: 1 },
@@ -174,9 +174,9 @@ const PRODUCTS = {
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'ESP8266', qty: 2 },
       { name: 'Breadboard', qty: 2 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Green LED', qty: 25 },
       { name: 'Red LED', qty: 25 },
       { name: 'Buzzer', qty: 1 },
@@ -216,9 +216,9 @@ const PRODUCTS = {
     'Grade 4': [
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'Led 5x5', qty: 10 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Resistors (220 ohm)', qty: 1 },
       { name: 'Breadboard', qty: 1 },
       { name: 'Micro:bit', qty: 1 },
@@ -228,9 +228,9 @@ const PRODUCTS = {
     'Grade 5': [
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
       { name: 'Led 5x5', qty: 10 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'IR Sensor', qty: 1 },
       { name: 'Breadboard', qty: 1 },
       { name: 'Buzzer', qty: 1 },
@@ -244,9 +244,9 @@ const PRODUCTS = {
       { name: 'Ultrasonic Sensor', qty: 1 },
       { name: 'Lithium Battery 3.7V (Pair)', qty: 2 },
       { name: 'Battery Holder', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Rocker Switch', qty: 1 },
       { name: 'Led 5x5', qty: 10 },
       { name: 'Buzzer', qty: 1 },
@@ -256,9 +256,9 @@ const PRODUCTS = {
     ],
     'Grade 7': [
       { name: 'Arduino Uno R3 and Cable', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: '4WD Car Kit', qty: 1 },
       { name: 'HC-05 Bluetooth Module', qty: 1 },
       { name: 'Lithium Battery 3.7V (Pair)', qty: 2 },
@@ -288,9 +288,9 @@ const PRODUCTS = {
       { name: 'Relay Module 5V', qty: 1 },
       { name: 'Breadboard', qty: 1 },
       { name: 'Led 5x5', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Insulation Tape', qty: 1 },
       { name: 'Ultrasonic Sensor', qty: 1 },
     ],
@@ -301,9 +301,9 @@ const PRODUCTS = {
       { name: 'USB Cable', qty: 1 },
       { name: 'Ultrasonic Sensor', qty: 2 },
       { name: 'Led 5x5', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Breadboard', qty: 1 },
       { name: 'HC-05 Bluetooth Module', qty: 1 },
       { name: 'Resistors (220 ohm)', qty: 1 },
@@ -320,9 +320,9 @@ const PRODUCTS = {
       { name: 'USB Cable', qty: 1 },
       { name: '4WD Car Kit', qty: 1 },
       { name: 'Led 5x5', qty: 1 },
-      { name: 'Jumper Wire M2M', qty: 5 },
-      { name: 'Jumper Wire F2F', qty: 3 },
-      { name: 'Jumper Wire M2F', qty: 3 },
+      { name: 'Jumper Wire M2M', qty: 2 },
+      { name: 'Jumper Wire F2F', qty: 1 },
+      { name: 'Jumper Wire M2F', qty: 1 },
       { name: 'Moisture Sensor', qty: 1 },
       { name: 'Breadboard', qty: 1 },
       { name: 'DHT11 Humidity Sensor', qty: 1 },
@@ -631,10 +631,8 @@ function renderResults(r) {
     : `${r.finalBaseSets}`;
 
   $('summary-cards').innerHTML = `
-    <div class="summary-card"><span class="sc-label">Total Components Sets</span><span class="sc-value">${setsDisplay}</span></div>
-    <div class="summary-card"><span class="sc-label">Total Divisions</span><span class="sc-value">${r.totalDivisions}</span></div>
-    <div class="summary-card"><span class="sc-label">Price per Set</span><span class="sc-value">${fmt(r.oneSetPrice)}</span></div>
     <div class="summary-card"><span class="sc-label">Total Students</span><span class="sc-value">${r.totalStudents}</span></div>
+    <div class="summary-card"><span class="sc-label">Total Divisions</span><span class="sc-value">${r.totalDivisions}</span></div>
   `;
 
   // Division table
@@ -649,13 +647,12 @@ function renderResults(r) {
     const cls = c.price === 0 ? ' class="missing-price"' : '';
     return `<tr>
       <td>${c.name}</td>
-      <td>${c.perSetQty}</td>
       <td>${c.totalQty}</td>
       <td${cls}>${c.price === 0 ? '⚠ ₹0' : fmt(c.price)}</td>
       <td>${fmt(c.lineTotal)}</td>
     </tr>`;
   }).join('') + `<tr style="font-weight:700;background:var(--surface2)">
-      <td colspan="4">Base Kits Subtotal (${r.finalBaseSets} sets)</td><td>${fmt(r.baseSubtotal)}</td>
+      <td colspan="3">Base Kits Subtotal (${r.finalBaseSets} sets)</td><td>${fmt(r.baseSubtotal)}</td>
     </tr>`;
 
   // Additional Component table
@@ -667,13 +664,12 @@ function renderResults(r) {
       const cls = c.price === 0 ? ' class="missing-price"' : '';
       return `<tr>
         <td>${c.name}</td>
-        <td>${c.perSetQty}</td>
         <td>${c.totalQty}</td>
         <td${cls}>${c.price === 0 ? '⚠ ₹0' : fmt(c.price)}</td>
         <td>${fmt(c.lineTotal)}</td>
       </tr>`;
     }).join('') + `<tr style="font-weight:700;background:var(--surface2)">
-        <td colspan="4">Additional Kits Subtotal (${r.finalAdditionalSets} sets)</td><td>${fmt(r.additionalSubtotal)}</td>
+        <td colspan="3">Additional Kits Subtotal (${r.finalAdditionalSets} sets)</td><td>${fmt(r.additionalSubtotal)}</td>
       </tr>`;
   } else {
     addSection.style.display = 'none';
